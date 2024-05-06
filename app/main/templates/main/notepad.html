@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notepad</title>
+
+    <script src="{{ url_for('static', filename='main/ckeditor5/ckeditor.js') }}" charset="utf-8"></script>
+    <link rel="stylesheet" href="{{ url_for('static',filename='main/css/notepad.css')}}">
+</head>
+<body>
+<div class="textarea">
+    <textarea rows="10" id="editor1" name="Contents"  class="input_notice"></textarea>
+</div>
+<script>
+    ClassicEditor
+    .create( document.querySelector( '#editor1' ), {
+            toolbar: {
+                    items: [
+                         'selectAll', '|',
+                        'bold','underline','|','fontColor', 'fontBackgroundColor', 'highlight','|',
+                        'link','SourceEditing'
+                    ]
+                },
+                language: 'kr'
+        } )
+
+    .then( editor1 => {
+        window.editor1 = editor1;
+    } )
+    .catch( err => {
+        console.error( err.stack );
+    } );
+
+</script>
+</body>
+</html>

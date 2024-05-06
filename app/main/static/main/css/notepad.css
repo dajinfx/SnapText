@@ -1,0 +1,18 @@
+.ck-editor__editable {
+  height: 350px;
+  width:70%;
+  resize: both;
+  overflow: auto;
+}
+
+.ck-toolbar {
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    border-bottom: none !important;
+}
+
+.textarea {
+    align-items: center;
+    justify-content: space-between;
+}
