@@ -1,18 +1,52 @@
 .ck-editor__editable {
-  height: 350px;
-  width:70%;
+  height: 450px;
   resize: both;
   overflow: auto;
+  resize: vertical !important;
 }
 
 .ck-toolbar {
-    border-top: none !important;
-    border-right: none !important;
-    border-left: none !important;
-    border-bottom: none !important;
+    background-color: transparent; !important/* 将背景颜色设为透明 */
+    background-color:#adw;
+}
+
+.ck-editor__editable_inline .ck-content .ck-paragraph {
+    margin-bottom: 0; /* 通过调整底部边距来缩小行间距 */
+}
+
+
+#content {
+
+    display:flex;
+    justify-content: center; /* 让内容居中 */
+    align-items: flex-start; /* 防止内容垂直方向上的压缩 */
+    width: auto; /* 让content元素宽度自动调整 */
 }
 
 .textarea {
-    align-items: center;
-    justify-content: space-between;
+    width: 78%; !important/* 设置文本区域宽度为父元素宽度的80% */
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    margin: 10px;0 auto; /* 让文本区域居中 */
+
+}
+
+.ck-powered-by {
+    display: none !important;
+}
+
+#toolbar-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+#localStorageList tr:hover {
+    background-color: lightgray;
+}
+
+#localStorageList tr {
+    cursor: pointer; /* 让鼠标移动到表格行时光标变成手型 */
 }

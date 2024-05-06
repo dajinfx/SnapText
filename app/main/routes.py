@@ -11,9 +11,10 @@ def index():
         {'cabID': '223', 'shijian': '123d', 'final_result': '223', 'info': '23', 'image_path': 'path_to_image2'},
         # 可以添加更多的字典项
     ]
-    return render_template('main/index.html', items =items )
 
-@main_bp.route('/notepad')
+    return render_template('main/notepad.html', items =items )
+
+@main_bp.route('/new')
 def notepad():
     return render_template('main/notepad.html')
 
