@@ -12,6 +12,7 @@
 </head>
 <body>
     <script src="{{ url_for('static', filename='main/ckeditor5/ckeditor.js') }}" charset="utf-8"></script>
+    <script src="{{ url_for('static', filename='main/js/notepad.js') }}"></script>
     <link rel="stylesheet" href="{{ url_for('static',filename='main/css/notepad.css')}}">
 
     <header>
@@ -71,8 +72,6 @@
 
 
     </script>
-    <script src="{{ url_for('static', filename='main/js/notepad.js') }}"></script>
-
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const editor1 = window.editor1;
