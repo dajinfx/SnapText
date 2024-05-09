@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feedback Form</title>
+<style>
+
+.modal-bg {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  width: 60%;
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 样式化关闭按钮 */
+.close-btn {
+  float: right;
+  cursor: pointer;
+}
+
+#feedback{
+  width: 100%;
+  height: 150px;
+}
+
+#email{
+  width: 100%;
+  height: 25px;
+  margin-bottom:10px;
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="modal-bg" id="modalBg">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>Feedback</h2>
+
+     <form action="/submit_feedback" id="feedbackForm" method="post" onsubmit="submitForm(event)">
+      <label for="email">Email address:</label><br>
+      <input type="email" id="email" name="email"><br>
+      <label for="feedback">Feedback:</label><br>
+      <textarea id="feedback" name="feedback" rows="4"></textarea><br>
+      <button type="submit">Submit</button>
+    </form>
+
+  </div>
+</div>
+
+
+
+<script>
+
+function closeModal() {
+  document.getElementById('modalBg').style.display = 'none';
+  window.location.href = "/";
+}
+</script>
+
+<script>
+
+function submitForm(event) {
+  event.preventDefault();
+
+  var formData = new FormData(document.getElementById('feedbackForm'));
+  var email = formData.get('email');
+  var feedback = formData.get('feedback');
+
+  if (email && feedback) {
+    alert("Thank you so much for your feedback!");
+    closeModal();
+  } else {
+    alert("Email and feedback are required to fill in.");
+  }
+}
+</script>
+
+</body>
+</html>

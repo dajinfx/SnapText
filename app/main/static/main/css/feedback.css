@@ -1,0 +1,82 @@
+/* 样式重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 设置导航栏样式 */
+.navbar {
+  background-color: #333; /* 导航栏背景色 */
+  color: #fff; /* 导航栏文字颜色 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* 设置 logo 样式 */
+.logo a {
+  color: #fff; /* logo 文字颜色 */
+  text-decoration: none;
+  font-size: 24px; /* logo 文字大小 */
+}
+
+/* 设置链接样式 */
+.links {
+  list-style-type: none;
+  display: flex;
+}
+
+.links li {
+  margin-right: 15px;
+}
+
+.links li:last-child {
+  margin-right: 0;
+}
+
+.links li a {
+  color: #fff; /* 链接文字颜色 */
+  text-decoration: none;
+}
+
+/* 设置反馈窗口样式 */
+.feedback-form {
+  display: none; /* 初始隐藏 */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.feedback-form input[type="email"],
+.feedback-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.feedback-form button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.feedback-form button:hover {
+  background-color: #555;
+}
